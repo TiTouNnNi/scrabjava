@@ -1,0 +1,25 @@
+# exclude latex build artifacts
+**.out
+**.log
+**.tmp
+**.pyg
+**.fls
+**.aux
+**.fdb_latexmk
+**.synctex.gz
+**.bbl
+**.blg
+
+# exclude java generated files
+**.class
+**.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Maven
+target/

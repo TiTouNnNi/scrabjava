@@ -110,4 +110,12 @@ public class Bag {
     public int size() {
         return tiles.size();
     }
+
+    /**
+     * Returns a copy of the remaining tiles to calculate probabilities.
+     * Useful for AI Expectiminimax to guess opponent's potential rack.
+     */
+    public List<Tile> getRemainingTiles() {
+        return new ArrayList<>(this.tiles);
+    }
 }

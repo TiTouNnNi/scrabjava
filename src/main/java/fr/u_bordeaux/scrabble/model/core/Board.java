@@ -24,33 +24,7 @@ public class Board {
         this.board = board;
     }
 
-    /**
-         * Creates a deep copy of the board for AI simulation.
-         * @return A new independent Board instance.
-         */
-        public Board deepCopy() {
-            Square[][] newGrid = new Square[SIZE][SIZE];
-            for (int i = 0; i < SIZE; i++) {
-                for (int j = 0; j < SIZE; j++) {
-                    Square oldSquare = this.board[i][j];
 
-                    // Square(Point position, SquareType squareType)
-                    Square newSquare = new Square(oldSquare.getPosition(), oldSquare.getSquareType());
-
-                    // Si la case contient une tuile, on la copie (référence)
-                    if (!oldSquare.isEmpty()) {
-                        newSquare.setTile(oldSquare.getTile());
-                    }
-                    newGrid[i][j] = newSquare;
-                }
-            }
-            return new Board(newGrid);
-        }
-    
-    // Helper to get the raw grid for the AI to scan
-    public Square[][] getGrid() {
-        return this.board;
-    }
 
     /**
      * Default constructor: initializes a standard Scrabble board.
